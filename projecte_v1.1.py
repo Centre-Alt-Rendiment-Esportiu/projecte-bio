@@ -10,12 +10,12 @@
 import numpy as np
 import random
 from tkinter import *
-#############import RPi.GPIO as GPIO
+import RPi.GPIO as GPIO
 import time
 #--------#
 #GPIO#
-#############GPIO.setmode(GPIO.BCM)
-#############GPIO.setup(18, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(18, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 #--------#
 
 #ventana principal#
@@ -226,7 +226,7 @@ def menu_correr_fre():
 		menu_correr.config(bg="black", highlightbackground="black")
 		menu_correr.pack()
 		l1=Label(menu_correr, text="Has escollit Correr i Frenada").pack()
-		començar_corre=Button(menu_correr, text="Començar", command=menu_jugar_fre).pack(side=LEFT)
+		començar_corre=Button(menu_correr, text="Començar", command=activar_fre).pack(side=LEFT)
 		sortir_correr=Button(menu_correr, text="Sortir", command=exit).pack(side=RIGHT)
 		temps_correr=Button(menu_correr, text="Temps", command=validar_temps).pack(side=RIGHT)
 		caixa_text=Entry(menu_correr, width=5, textvariable=temps).pack(side=RIGHT)
