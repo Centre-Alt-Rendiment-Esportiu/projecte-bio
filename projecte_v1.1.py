@@ -131,7 +131,7 @@ def menu_jugar_dre():
 
 def menu_jugar_esq():
 	global control,area_jugar,puls
-	rand = np.random.choice([1,2],p=[0.7,0.3])
+	rand = np.random.choice([1,2],p=[0.3,0.7])
 	if control != 1:
 		area_jugar = Canvas(window, width=j, height=h)
 		area_jugar.config(bg="black",highlightbackground="black")
