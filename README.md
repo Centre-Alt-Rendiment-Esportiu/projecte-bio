@@ -1,2 +1,0 @@
-# projecte-bio
-Projecte Biomecanica
