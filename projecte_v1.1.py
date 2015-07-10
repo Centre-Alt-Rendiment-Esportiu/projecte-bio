@@ -7,6 +7,8 @@
 #"""
 
 #Librerias#
+import sys
+import os
 import numpy as np
 import random
 from tkinter import *
@@ -333,6 +335,9 @@ def opcio_saltar():
 	else:
 		menu_saltar2()
 
+def apagar():
+	os.system("/sbin/poweroff")
+
 # menu_principal#
 menu1=Menu(window)
 window.config(menu=menu1)
@@ -343,8 +348,9 @@ menu1_1.add_command(label="Frenada", command=opcio_correr_fre)
 menu1_1.add_command(label="Correr Dreta", command=opcio_correr_dre)
 menu1_1.add_command(label="Correr Esquerra", command=opcio_correr_esq)
 menu1_1.add_command(label="Saltar", command=opcio_saltar)
+menu1_1.add_separator()
 menu1_1.add_command(label="Sortir", command=exit)
-
+menu1_1.add_command(label="Apagar", command=apagar)
 #---------#
 
 window.mainloop()
